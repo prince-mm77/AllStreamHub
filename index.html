@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AllStreamHub | Get Free Access to Movies, Web-Series, Games & Software</title>
+    <meta name="description" content="Discover and download free movies, web-series, premium PC games, essential software, music, and anime on AllStreamHub. Your ultimate entertainment catalog repository.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://allstreamhub.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allstreamhub.com/">
+    <meta property="og:title" content="AllStreamHub | Free Movies, Web-Series, Games & Software">
+    <meta property="og:description" content="Discover and download free movies, web-series, premium PC games, essential software, music, and anime on AllStreamHub.">
+    <meta property="og:image" content="https://allstreamhub.com/Gemini_Generated_Image_x6huux6huux6huux.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://allstreamhub.com/">
+    <meta property="twitter:title" content="AllStreamHub | Free Movies, Web-Series, Games & Software">
+    <meta property="twitter:description" content="Discover and download free movies, web-series, premium PC games, essential software, music, and anime on AllStreamHub.">
+    <meta property="twitter:image" content="https://allstreamhub.com/Gemini_Generated_Image_x6huux6huux6huux.png">
+
+    <link rel="shortcut icon" href="Gemini_Generated_Image_x6huux6huux6huux.png" type="image/x-icon">
+    
+    <style>
+        /* ==========================================================
+           1. RESET & BASE STYLES
+           ========================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e112a 100%);
+            background-attachment: fixed;
+            color: #f8fafc;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Reusable Glass Effect */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        /* ==========================================================
+           2. BETTER HEADER & NAVIGATION
+           ========================================================== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 20px;
+            background: linear-gradient(to bottom, rgba(9, 13, 22, 0.9) 0%, rgba(9, 13, 22, 0) 100%);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 35px;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        nav img {
+            height: 42px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
+        }
+
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(45deg, #38bdf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Search Bar */
+        .search-container {
+            flex: 0 1 350px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 18px;
+            border-radius: 50px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-container input:focus {
+            border-color: #38bdf8;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 6px 2px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #fff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, #38bdf8, #c084fc);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Mobile Hamburger Button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: #f8fafc;
+            transition: 0.3s;
+        }
+
+        /* ==========================================================
+           3. LAYOUT, HERO, & SIDEBAR
+           ========================================================== */
+        .hero-section {
+            max-width: 1400px;
+            margin: 40px auto 10px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-section p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        aside {
+            position: sticky;
+            top: 110px;
+            padding: 24px;
+        }
+
+        aside h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #94a3b8;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        aside ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        aside a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        aside a:hover {
+            color: #fff;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
+            border-color: rgba(192, 132, 252, 0.3);
+            transform: translateX(4px);
+        }
+
+        /* ==========================================================
+           4. ARTICLES GRID & SEPARATED SPACING
+           ========================================================== */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            border-left: 3px solid #38bdf8;
+            padding-left: 10px;
+        }
+
+        .thumbnail-wrapper {
+            display: block;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            aspect-ratio: 16 / 10;
+        }
+
+        .thumbnail-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Interactive Card State Animations */
+        .category-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.06);
+        }
+
+        .category-card:hover .thumbnail-wrapper img {
+            transform: scale(1.08);
+        }
+
+        /* Movie card overlay gradient vignette */
+        .thumbnail-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(9, 13, 22, 0.6));
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* No search results fallback status */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        /* ==========================================================
+           5. FOOTER
+           ========================================================== */
+        footer {
+            margin-top: 80px;
+            padding: 35px;
+            text-align: center;
+            background: rgba(9, 13, 22, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================================
+           6. RESPONSIVE DESIGN
+           ========================================================== */
+        @media (max-width: 1100px) {
+            main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            aside {
+                position: static;
+                width: 100%;
+            }
+
+            aside ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            aside li {
+                flex: 1 1 calc(33.33% - 10px);
+                min-width: 140px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            nav {
+                border-radius: 25px;
+                padding: 12px 20px;
+            }
+
+            .search-container {
+                order: 3;
+                flex: 1 1 100%;
+                margin: 10px 0 0 0;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.95);
+                backdrop-filter: blur(20px);
+                border-radius: 20px;
+                padding: 25px;
+                flex-direction: column;
+                gap: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            aside ul {
+                flex-direction: column;
+            }
+        }
+
+        .ambient-orb {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            margin-left: -200px;
+            margin-top: -200px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(192, 132, 252, 0.08) 50%, transparent 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            backface-visibility: hidden;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo-brand">
+                <img src="Gemini_Generated_Image_x6huux6huux6huux.png" alt="AllStreamHub Logo">
+                <span class="brand-name">AllStreamHub</span>
+            </a>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search categories (e.g., Movies, Games)..." aria-label="Search entertainment categories">
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="movie.html">Movies</a>
+                <a href="movie.html">Web-Series</a>
+                <a href="software.html">Software</a>
+                <a href="music.html">Music</a>
+                <a href="games.html">Games</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1>AllStreamHub Entertainment Hub</h1>
+        <p>Your instant portal for free high-speed access to digital entertainment catalogs, productivity software, and online gaming libraries.</p>
+    </section>
+
+    <main>
+        <aside class="glass-panel">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="dmca.html">DMCA Notice</a></li>
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            </ul>
+        </aside>
+
+        <section class="content-grid" id="contentGrid">
+
+            <article class="category-card" data-title="games">
+                <h3>Games</h3>
+                <a href="games.html" class="thumbnail-wrapper" aria-label="Browse Free Games Catalog">
+                    <img src="Gemini_Generated_Image_rmw8v0rmw8v0rmw8.png" alt="Download free PC and console games catalog grid layout" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="music">
+                <h3>Music</h3>
+                <a href="music.html" class="thumbnail-wrapper" aria-label="Listen to Free Music">
+                    <img src="Gemini_Generated_Image_mqp5zwmqp5zwmqp5.png" alt="Listen or stream royalty free high quality music collections" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="movies web-series">
+                <h3>Movies &amp; Web-Series</h3>
+                <a href="movie.html" class="thumbnail-wrapper" aria-label="Stream Movies and Web-Series Catalog">
+                    <img src="Gemini_Generated_Image_88d7a488d7a488d7.png" alt="Stream trending cinematic movies and exclusive online web series collection" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="software">
+                <h3>Software</h3>
+                <a href="software.html" class="thumbnail-wrapper" aria-label="Download Premium Software">
+                    <img src="Gemini_Generated_Image_pvnm25pvnm25pvnm.png" alt="Download windows productivity applications and open source tools software" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="sports">
+                <h3>Sports</h3>
+                <a href="sports.html" class="thumbnail-wrapper" aria-label="Watch Live Sports Information">
+                    <img src="Gemini_Generated_Image_rnajovrnajovrnaj.png" alt="Check upcoming live sports broadcasting schedules and streams events" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="anime">
+                <h3>Anime</h3>
+                <a href="anime.html" class="thumbnail-wrapper" aria-label="Stream Anime Online Collection">
+                    <img src="Gemini_Generated_Image_ji7li3ji7li3ji7l.png" alt="Watch subbed and dubbed popular classic and seasonal anime television episodes" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="e-books books">
+                <h3>E-Books</h3>
+                <a href="ebooks.html" class="thumbnail-wrapper" aria-label="Read Free E-Books Archive">
+                    <img src="Gemini_Generated_Image_f4qoxf4qoxf4qoxf.png" alt="Read free interactive textbooks and digital e-books libraries" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="vpn proxy security">
+                <h3>VPN</h3>
+                <a href="vpn.html" class="thumbnail-wrapper" aria-label="Recommended Free VPNs and Proxies">
+                    <img src="Gemini_Generated_Image_38vvd038vvd038vv.png" alt="Secure private anonymous browsing virtual private network protection proxy features" loading="lazy">
+                </a>
+            </article>
+
+            <article class="category-card" data-title="ad blockers extension privacy">
+                <h3>Ad Blockers</h3>
+                <a href="adblockers.html" class="thumbnail-wrapper" aria-label="Get Protected with Ad Blockers Extensions">
+                    <img src="Gemini_Generated_Image_yix45kyix45kyix4.png" alt="Remove dangerous tracking scripts and popup banners using ad blocking extensions" loading="lazy">
+                </a>
+            </article>
+
+        </section>
+        <div class="ambient-orb" id="ambientOrb"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AllStreamHub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            'use strict';
+
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const searchInput = document.getElementById('searchInput');
+            const cards = document.querySelectorAll('.category-card');
+            const contentGrid = document.getElementById('contentGrid');
+            const orb = document.getElementById('ambientOrb');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                });
+
+                document.addEventListener('click', (e) => {
+                    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            }
+
+            if (searchInput && cards.length > 0) {
+                const noResultsEl = document.createElement('div');
+                noResultsEl.className = 'no-results';
+                noResultsEl.textContent = 'No matching streaming categories discovered.';
+                noResultsEl.style.display = 'none';
+                contentGrid.appendChild(noResultsEl);
+
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    let visibleCount = 0;
+
+                    cards.forEach(card => {
+                        const targetMeta = card.getAttribute('data-title') || '';
+                        if (targetMeta.includes(query)) {
+                            card.style.display = 'flex';
+                            visibleCount++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    noResultsEl.style.display = visibleCount === 0 ? 'block' : 'none';
+                });
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left - (rect.width / 2);
+                    const y = e.clientY - rect.top - (rect.height / 2);
+                    card.style.transform = `translateY(-6px) rotateX(${-y * 0.02}deg) rotateY(${x * 0.02}deg)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+
+            const currentPath = window.location.pathname.split('/').pop();
+            const navAnchors = document.querySelectorAll('.nav-links a');
+            navAnchors.forEach(anchor => {
+                if (anchor.getAttribute('href') === currentPath) {
+                    anchor.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

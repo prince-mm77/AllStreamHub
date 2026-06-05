@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | AllStreamHub</title>
+    <link rel="shortcut icon" href="Gemini_Generated_Image_x6huux6huux6huux.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Reset & Base Layout --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #080b11;
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- Metamorphic Dynamic Background --- */
+        .interactive-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.04) 50%, transparent 100%);
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(80px);
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+
+        /* --- Header & Banner Styling --- */
+        header {
+            width: 100%;
+            max-width: 1200px;
+            padding: 3rem 1.5rem 1rem 1.5rem;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #a855f7, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #hero-desc {
+            max-width: 750px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #94a3b8;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        /* इमेज को ग्लास फ्रेम में रैप करने के लिए */
+        .banner-wrapper {
+            width: 100%;
+            border-radius: 20px;
+            padding: 6px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+
+        /* इमेज की स्टाइलिंग */
+        .hero-banner {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            /* इमेज को बिना स्ट्रेच किए परफेक्टली क्रॉप करेगा */
+            border-radius: 14px;
+            display: block;
+        }
+
+        /* --- Content Grid Layout --- */
+        .grid-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2.5rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            flex-grow: 1;
+        }
+
+        /* --- Premium Glass Cards --- */
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(6, 182, 212, 0.08));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.6),
+                0 1px 1px 0 rgba(255, 255, 255, 0.1) inset;
+        }
+
+        /* --- Links Styling --- */
+        .card a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            letter-spacing: 0.01em;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: block;
+            z-index: 1;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .card:hover a {
+            color: #ffffff;
+            text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+        }
+
+        /* --- Footer Area --- */
+        footer {
+            width: 100%;
+            padding: 2.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            background: rgba(8, 11, 17, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #475569;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-banner {
+                max-height: 200px;
+                /* मोबाइल पर इमेज की हाइट कम हो जाएगी ताकि लुक खराब न हो */
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+    
+            
+        
+    </style>
+</head>
+
+<body>
+    <div class="interactive-glow" id="mouseGlow"></div>
+
+    <header>
+        <div class="header-container">
+            <h1>Games</h1>
+            <p id="hero-desc">Play More. Worry Less. 100% Safe Gaming.<br>
+                Download your favorite PC and Console games absolutely free. We provide highly compressed repacks, full
+                ISOs, and pre-installed games designed to save your download data.</p>
+
+            <div class="banner-wrapper">
+                <img src="592d2a1c-82ee-4698-9072-9d91d5cfdab4.jpg" alt="Gaming Banner" class="hero-banner">
+            </div>
+        </div>
+    </header>
+
+    <main class="grid-container">
+        <article class="card"><a href="https://ankergames.net/" target="_blank" rel="noopener noreferrer">Anker
+                Games</a></article>
+        <article class="card"><a href="https://gtorr.net/" target="_blank" rel="noopener noreferrer">GTorr</a></article>
+        <article class="card"><a href="https://www.pirateproxy-bay.com/" target="_blank" rel="noopener noreferrer">The
+                Pirate Bay</a></article>
+        <article class="card"><a href="https://airtel.hashhackers.com/" target="_blank"
+                rel="noopener noreferrer">1377x</a></article>
+        <article class="card"><a href="https://nyaa.land/" target="_blank" rel="noopener noreferrer">Nyaa</a></article>
+        <article class="card"><a href="https://oceanofcompressed.com/" target="_blank" rel="noopener noreferrer">Ocean
+                Of Compressed</a></article>
+        <article class="card"><a href="https://oceantogames.com/" target="_blank" rel="noopener noreferrer">Ocean Of
+                Games</a></article>
+        <article class="card"><a href="https://www.romsgames.net/" target="_blank" rel="noopener noreferrer">Roms
+                Games</a></article>
+        <article class="card"><a href="https://romsfun.com/roms/" target="_blank" rel="noopener noreferrer">Roms Fun</a>
+        </article>
+        <article class="card"><a href="https://www.romspedia.com/" target="_blank" rel="noopener noreferrer">Roms
+                Pedia</a></article>
+        <article class="card"><a href="https://romsretro.com/" target="_blank" rel="noopener noreferrer">Roms Retro</a>
+        </article>
+        <article class="card"><a href="https://www.retrostic.com/roms" target="_blank"
+                rel="noopener noreferrer">Retrostic</a></article>
+        <article class="card"><a href="https://crotorrents.com/" target="_blank"
+                rel="noopener noreferrer">CroTorrents</a></article>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2026 AllStreamHub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const glow = document.getElementById('mouseGlow');
+    
+    // Smoothly tracks the user's mouse position to move the metamorphic background orb
+    window.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        // Using requestAnimationFrame for fluid performance
+        requestAnimationFrame(() => {
+            glow.style.left = `${x}px`;
+            glow.style.top = `${y}px`;
+        });
+    });
+});
+        
+   </script>
+</body>
+</html>

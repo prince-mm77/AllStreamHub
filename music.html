@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music | AllStreamHub</title>
+    <link rel="shortcut icon" href="Gemini_Generated_Image_x6huux6huux6huux.png" type="image/x-icon">
+    <style>
+        /* ==========================================
+   1. RESET & SYSTEM BASICS
+   ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* --- Metamorphic Dynamic Background --- */
+        .interactive-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.04) 50%, transparent 100%);
+            z-index: -1;
+            pointer-events: none;
+            filter: blur(80px);
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+
+        body {
+            min-height: 100vh;
+            /* Metamorphic cosmic gradient matching the homepage */
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+            background-attachment: fixed;
+            color: #f8fafc;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================
+   2. HERO HEADER & BANNER
+   ========================================== */
+        header {
+            max-width: 1400px;
+            margin: 20px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        nav h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            /* Glowing metamorphic text effect */
+            background: linear-gradient(45deg, #38bdf8, #c084fc, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Professional Responsive Banner Configuration */
+        nav img {
+            width: 100%;
+            height: 300px;
+            /* Scaled down from 500px to maintain crisp layout balance */
+            object-fit: cover;
+            /* Prevents your banner graphic from stretching distortively */
+            border-radius: 16px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        nav p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            text-align: center;
+        }
+
+        /* ==========================================
+   3. MUSIC SITES GRID (MAIN CONTENT)
+   ========================================== */
+        main {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+            /* Renders your site links into a premium dashboard array */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Glass Link Blocks */
+        article {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            /* Uniform height for clean block presentation */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Glow gradient tracking inside the cards */
+        article::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        article a {
+            color: #f1f5f9;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+
+        /* Metamorphic Hover States */
+        article:hover {
+            transform: scale(1.04) translateY(-4px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(192, 132, 252, 0.4);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4),
+                0 0 15px rgba(192, 132, 252, 0.2);
+        }
+
+        article:hover::before {
+            opacity: 1;
+        }
+
+        article:hover a {
+            color: #fff;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+        }
+
+        /* ==========================================
+   4. FOOTER
+   ========================================== */
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================
+   5. RESPONSIVE BREAKPOINTS
+   ========================================== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+            }
+
+            nav h1 {
+                font-size: 2rem;
+            }
+
+            nav img {
+                height: 200px;
+                /* Shrinks comfortably on mobile screens */
+            }
+
+            nav p {
+                font-size: 0.95rem;
+            }
+
+            main {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 15px;
+            }
+
+            article {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="interactive-glow" id="mouseGlow"></div>
+    <header>
+        <nav>
+            <h1>Music</h1>
+            <img src="—Pngtree—purple minimalist music note banner_1089759.jpg" alt="" width="1350" height="500">
+            <p>Your Music. Your Quality. 100% Safe.
+                Stream and download millions of your favorite songs and trending tracks in crystal-clear 320kbps MP3 and
+                lossless FLAC quality. No subscriptions, no hidden fees, and absolutely zero malware or safety risks.
+                Enjoy a secure, fast, and virus-free listening experience that protects your device while you vibe.</p>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <a href="https://koshalworld.com/" target="_blank" rel="noopener noreferrer">Koshal World</a>
+
+        </article>
+        <article>
+            <a href="https://djpunjab.is/" target="_blank" rel="noopener noreferrer">DJ Punjab</a>
+
+        </article>
+        <article>
+            <a href="https://pagalnew.com/" target="_blank" rel="noopener noreferrer">Pagal New</a>
+
+        </article>
+        <article>
+            <a href="https://southmelody.com/" target="_blank" rel="noopener noreferrer">South Melody</a>
+
+        </article>
+        <article>
+            <a href="https://djbaap.com.se/" target="_blank" rel="noopener noreferrer">DJ Baap</a>
+        </article>
+        <article>
+            <a href="https://naa-songs.com/" target="_blank" rel="noopener noreferrer">Naa Songs</a>
+
+        </article>
+    </main>
+    <footer>
+        <p>All Right Researved&copy;</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const glow = document.getElementById('mouseGlow');
+
+            // Smoothly tracks the user's mouse position to move the metamorphic background orb
+            window.addEventListener('mousemove', (e) => {
+                const x = e.clientX;
+                const y = e.clientY;
+
+                // Using requestAnimationFrame for fluid performance
+                requestAnimationFrame(() => {
+                    glow.style.left = `${x}px`;
+                    glow.style.top = `${y}px`;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
